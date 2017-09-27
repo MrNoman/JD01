@@ -14,9 +14,8 @@ public class MoveArrayInLoop {
         loopArray(formRandomArray(array));
     }
 
-    public static void loopArray(int[] array) throws InterruptedException, IOException {
+    private static void loopArray(int[] array) throws InterruptedException, IOException {
         System.out.println("Для окончания выполнения нажмите Enter...");
-        Scanner in = new Scanner(System.in);
         System.out.println(Arrays.toString(array));
         do {
             int exchangeNumber = array[array.length - 1];
@@ -32,7 +31,7 @@ public class MoveArrayInLoop {
         } while (System.in.available() == 0);
     }
 
-    public static int[] formRandomArray(int[] array) {
+    private static int[] formRandomArray(int[] array) {
         Random random = new Random();
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(100);
