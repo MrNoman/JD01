@@ -20,9 +20,9 @@ public class LinearizeMethod {
     private static int[] linearize(int[][] inputArray){
         int[] outArray = new int[inputArray.length * inputArray[0].length];
         int outArrayIndex = 0;
-        for (int i = 0; i < inputArray.length ; i++) {
+        for (int[] anInputArray : inputArray) {
             for (int j = 0; j < inputArray[0].length; j++) {
-                outArray[outArrayIndex] = inputArray[i][j];
+                outArray[outArrayIndex] = anInputArray[j];
                 outArrayIndex++;
             }
         }
